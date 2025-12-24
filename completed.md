@@ -2,6 +2,28 @@
 
 **AI-managed file — humans should not edit this directly.** The agent records finished work here.
 
+- [x] 2025-12-24: Processed `todo-inbox.md` update (queued `prompt_followup9.md`) and confirmed readme-spec-engine repo is unavailable; prompt followups 8-9 are blocked. Skill: none. (ledger: 2025-12-24T13:36:38-08:00 — Prompt followup execution (README governance))
+
+- [x] 2025-12-24: Executed `prompt_followup9.md` (README governance CI bridge + new repo bootstrap Skill), captured workflow snapshot `rev_009_current`, and removed the prompt. Skill: none. (ledger: 2025-12-24T13:36:38-08:00 — Prompt followup execution (README governance))
+
+- [x] 2025-12-24: Executed `prompt_followup8.md` (spec-driven README governance docs and HUMAN_START_HERE update) and removed the prompt. Skill: none. (ledger: 2025-12-24T13:36:38-08:00 — Prompt followup execution (README governance))
+
+- [x] 2025-12-24: Executed `prompt_followup7.md` (README governance rubric + lint guide) and removed the prompt. Skill: none. (ledger: 2025-12-24T13:23:53-08:00 — README governance followups)
+
+- [x] 2025-12-24: Executed `prompt_followup6.md` (README lint autofix + quality CI wiring) and removed the prompt. Skill: none. (ledger: 2025-12-24T13:23:53-08:00 — README governance followups)
+
+- [x] 2025-12-24: Executed `prompt_followup5.md` (README rewrite and governance framing) and removed the prompt. Skill: none. (ledger: 2025-12-24T13:23:53-08:00 — README governance followups)
+
+- [x] 2025-12-24: Executed `prompt_followup4.md` (TypeScript UI governance validators, CLI entrypoint, and passing/failing examples) and removed the prompt. Skill: none. (ledger: 2025-12-24T12:54:26-08:00 — Prompt followup execution)
+
+- [x] 2025-12-24: Executed `prompt_followup3.md` (added Skill `ui_governance` package, governance docs, adversarial tests, and wiki references) and removed the prompt. Skill: ui_governance. (ledger: 2025-12-24T12:54:26-08:00 — Prompt followup execution)
+
+- [x] 2025-12-24: Executed `prompt_followup2.md` (doc profiles, pre-commit hook, codex rewrite prompt, internal-notes profile, profile summary table) and removed the prompt. Skill: none. (ledger: 2025-12-24T12:54:26-08:00 — Prompt followup execution)
+
+- [x] 2025-12-24: Executed `prompt_followup1.md` (doc profiles, CI enforcement, and profile selection) and removed the prompt. Skill: none. (ledger: 2025-12-24T12:54:26-08:00 — Prompt followup execution)
+
+- [x] 2025-12-24: Implemented Structured Richness documentation system (spec, markdownlint + Vale configs, templates) and moved follow-up prompts into `todo.md`. Skill: none. (ledger: 2025-12-24T12:43:00-08:00 — Structured Richness documentation system)
+
 - [x] 2025-12-24: Pushed commit `6be59ff` to `origin/master` per request. Skill: none. (ledger: 2025-12-24T12:30:34-08:00 — Git push (housekeeping))
 
 - [x] 2025-12-24: Confirmed the UI intent Skill manifest and PDCA loop locations for the UI intent system. Skill: none. (ledger: 2025-12-24T12:27:50-08:00 — UI intent protocol confirmation (Skill + PDCA))

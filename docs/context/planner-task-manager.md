@@ -1,5 +1,76 @@
 # Planner / Task Manager Ledger
 
+## 2025-12-24T13:36:38-08:00 — Prompt followup execution (README governance)
+- Summary: Execute prompt_followup8-9 in order, covering README spec governance, CI bridge, and agent bootstrap contract.
+- Details:
+  - Pre-task `todo-inbox.md` sweep: move prompt_followup9 into `todo.md` under Next Features & Updates.
+  - Clarification Gate: not triggered (request is clear; repo existence check required).
+  - Reasoning Skills pipeline (pre-planner) logs:
+    - {"event_type":"reasoning","skill_name":"bind_spec_id","order":1,"guarantees":["spec_id_context: none (prompt followups 8-9)"],"violations":[],"abort_reason":null}
+    - {"event_type":"reasoning","skill_name":"enforce_single_concept","order":2,"guarantees":["concept: prompt-execution"],"violations":[],"abort_reason":null}
+    - {"event_type":"reasoning","skill_name":"forbid_cross_concept_reasoning","order":3,"guarantees":["no_cross_concept_dependencies"],"violations":[],"abort_reason":null}
+  - Skill search: no applicable Skill (prompt execution).
+  - Progress: repo availability confirmed; added README governance section in README, HUMAN_START_HERE guidance, README_GOVERNANCE.md, README map update, AGENTS/docs/agents guidance, README governance CI workflow, and the new-repo bootstrap Skill. Removed prompt files 8-9.
+  - Post-task `todo-inbox.md` sweep: inbox empty; removed todo entries for followups 8-9.
+  - Snapshot/logging: captured workflow revision `rev_009_current` via `scripts/create-workflow-revision.sh`.
+- Related Spec / Skill: n/a (prompt execution).
+- Status: completed
+
+## 2025-12-24T13:23:53-08:00 — README governance followups
+- Summary: Execute prompt_followup5-8 (README rewrite, linting, autofix, and spec-driven governance docs).
+- Details:
+  - Pre-task `todo-inbox.md` sweep: moved followup prompts 5-8 into `todo.md`.
+  - Clarification Gate: not triggered (request is clear).
+  - Reasoning Skills pipeline (pre-planner) logs:
+    - {"event_type":"reasoning","skill_name":"bind_spec_id","order":1,"guarantees":["spec_id_context: none (README governance followups)"],"violations":[],"abort_reason":null}
+    - {"event_type":"reasoning","skill_name":"enforce_single_concept","order":2,"guarantees":["concept: documentation-governance"],"violations":[],"abort_reason":null}
+    - {"event_type":"reasoning","skill_name":"forbid_cross_concept_reasoning","order":3,"guarantees":["no_cross_concept_dependencies"],"violations":[],"abort_reason":null}
+  - Skill search: no applicable Skill (prompt execution).
+  - Progress: executed prompt_followup5-7 (README rewrite + lint tooling + governance docs).
+  - Progress: prompt_followup8 completed after repo availability confirmation (README governance docs).
+- Related Spec / Skill: n/a (prompt execution).
+- Status: completed
+
+## 2025-12-24T12:54:26-08:00 — Prompt followup execution
+- Summary: Execute prompt_followup1-4 tasks in order and clean up prompt files.
+- Details:
+  - Pre-task `todo-inbox.md` sweep: moved follow-up prompts into `todo.md`.
+  - Clarification Gate: not triggered (request is clear).
+  - Reasoning Skills pipeline (pre-planner) logs:
+    - {"event_type":"reasoning","skill_name":"bind_spec_id","order":1,"guarantees":["spec_id_context: none (prompt followups)"],"violations":[],"abort_reason":null}
+    - {"event_type":"reasoning","skill_name":"enforce_single_concept","order":2,"guarantees":["concept: prompt-execution"],"violations":[],"abort_reason":null}
+    - {"event_type":"reasoning","skill_name":"forbid_cross_concept_reasoning","order":3,"guarantees":["no_cross_concept_dependencies"],"violations":[],"abort_reason":null}
+  - Skill search: used skill-creator for the ui_governance Skill package.
+  - Progress: added documentation profiles (rich-human, lean-reference, strict-ci) with configs and frontmatter guidance.
+  - Progress: added docs quality tooling (pre-commit hook, `scripts/docs-quality.sh`, `scripts/check-docs-quality.py` updates).
+  - Progress: added internal-notes profile, codex doc rewrite prompt, and spec profile summary table.
+  - Progress: created Skill `ui_governance` package with governance docs and adversarial test plan.
+  - Progress: added UI governance validators (intent, capability, constitution) with CI-friendly entrypoint and examples.
+  - Progress: updated UI intent concept manifest and wiki references for the new skill.
+  - Progress: removed executed prompt followup files.
+  - Post-task `todo-inbox.md` sweep: moved followup prompts 5-8 into `todo.md`.
+- Related Spec / Skill: n/a (prompt execution).
+- Status: completed
+
+## 2025-12-24T12:43:00-08:00 — Structured Richness documentation system
+- Summary: Design and implement Structured Richness spec, lint/vale configs, and templates.
+- Details:
+  - Pre-task `todo-inbox.md` sweep: no items to move (template text only).
+  - Clarification Gate: not triggered (request is clear).
+  - Reasoning Skills pipeline (pre-planner) logs:
+    - {"event_type":"reasoning","skill_name":"bind_spec_id","order":1,"guarantees":["spec_id_context: none (documentation quality system)"],"violations":[],"abort_reason":null}
+    - {"event_type":"reasoning","skill_name":"enforce_single_concept","order":2,"guarantees":["concept: documentation-quality-system"],"violations":[],"abort_reason":null}
+    - {"event_type":"reasoning","skill_name":"forbid_cross_concept_reasoning","order":3,"guarantees":["no_cross_concept_dependencies"],"violations":[],"abort_reason":null}
+  - Skill search: no applicable Skill (documentation quality system).
+  - Progress: created `docs/specs/structured-richness-markdown-v1.md` plus `.markdownlint.json` and a heading-depth custom rule.
+  - Progress: added Vale config at `vale/.vale.ini` with StructuredRichness style rules.
+  - Progress: added templates under `docs/templates/` (README, design doc, concept doc).
+  - Progress: swept `todo-inbox.md` and moved follow-up prompt items into `todo.md`.
+  - Progress: optional refactor of existing docs deferred to avoid broad rewrites.
+  - Post-task `todo-inbox.md` sweep: no remaining items to move (template text only).
+- Related Spec / Skill: n/a (documentation quality system).
+- Status: completed
+
 ## 2025-12-24T12:30:34-08:00 — Git push (housekeeping)
 - Summary: Push recent changes to origin/master per request.
 - Details:

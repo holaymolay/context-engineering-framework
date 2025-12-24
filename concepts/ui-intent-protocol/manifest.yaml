@@ -10,6 +10,7 @@ governance:
   specId: "d520edbb-18e7-4b29-834c-6756329b2c81"
   skills:
     - ui_intent.emit
+    - ui_governance
 
 purpose:
   summary: Provide a minimal, extensible UI intent layer with adapter-governed rendering.
@@ -29,6 +30,8 @@ handlers:
     path: handlers/adapter/tailwind-adapter.tsx
   - id: reference-renderer
     path: handlers/reference/render.ts
+  - id: governance-validator
+    path: handlers/governance/validate.ts
 
 validation:
   intentSchema: handlers/intent/intent.schema.json

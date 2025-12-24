@@ -4,13 +4,14 @@ This playbook summarizes how to use the UI intent protocol and its governing Ski
 
 ## Quick Path
 1. Author intents using the schema in `concepts/ui-intent-protocol/handlers/intent/intent-schema.ts` (JSON Schema: `concepts/ui-intent-protocol/handlers/intent/intent.schema.json`).
-2. Validate intent emission via Skill `ui_intent.emit` (`skills/ui-intent-emit/`).
-3. Render via the adapter in `concepts/ui-intent-protocol/handlers/adapter/tailwind-adapter.tsx`.
-4. Apply PDCA changes through schema/pattern/token updates (`concepts/ui-intent-protocol/pdca.md`).
+2. Apply UI governance via Skill `ui_governance` (`skills/ui-governance/`).
+3. Validate intent emission via Skill `ui_intent.emit` (`skills/ui-intent-emit/`).
+4. Render via the adapter in `concepts/ui-intent-protocol/handlers/adapter/tailwind-adapter.tsx`.
+5. Apply PDCA changes through schema/pattern/token updates (`concepts/ui-intent-protocol/pdca.md`).
 
 ## Authoritative References
 - Concept: `concepts/ui-intent-protocol/manifest.yaml`
 - Schema & examples: `concepts/ui-intent-protocol/handlers/intent/`
 - Adapter contract: `concepts/ui-intent-protocol/handlers/adapter/`
-- Skill: `skills/ui-intent-emit/skill.yaml`
+- Skills: `skills/ui-governance/skill.yaml`, `skills/ui-intent-emit/skill.yaml`
 - PDCA loop: `concepts/ui-intent-protocol/pdca.md`

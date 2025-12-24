@@ -1,90 +1,61 @@
 # Context-Engineering Framework for Coding Agents
+A governance and context-engineering framework that turns human requests into
+repeatable, auditable agent execution.
+It replaces ad-hoc prompting with explicit specs, Skills, and enforcement.
+It captures context, decisions, and validation artifacts for reliable reuse.
+It is designed for CLI- or IDE-driven coding agents.
 
-A reusable, LLM-agnostic context-engineering framework that turns human requests into auditable, high-quality agent execution through specs, Skills, context ledgers, and continuous improvement.
+## Who this is for
+This framework is for engineers operating coding agents in production work.
+It is for teams that need predictable outcomes and traceable decisions.
 
-**AI-operated only:** Use the chat window (or `todo-inbox.md`) to provide tasks and decisions. The agent runs scripts and updates AI-managed files.
+- Teams running agentic workflows in CLI or IDE environments.
+- Engineers who require audit trails and deterministic behavior.
+- Not for casual prompt experimentation or one-off scripting.
 
-## What this is
-This project is a governance framework for working with CLI-based coding agents, whether you run them from a terminal or an IDE extension. It gives a solo developer a disciplined way to plan, execute, validate, and document agent work without losing speed.
+## Core problem
+Agentic coding workflows fail when intent is ambiguous and outcomes drift.
+They create clarification loops, non-deterministic edits, and no audit trail.
+The result is fragile delivery that cannot be reliably reviewed or resumed.
 
-If you are a human reader, start with `HUMAN_START_HERE.md`.
+## Solution (high level)
+Context engineering turns intent into enforceable structure.
+Specs define work, Skills constrain behavior, and governance records results.
+The framework combines clarification gates, validation, and logged artifacts.
 
-## AI-operated by default
-- You interact through the chat window (or by adding items to `todo-inbox.md`).
-- The agent runs framework scripts and updates AI-managed files (`todo.md`, `backlog.md`, `completed.md`, `handover.md`, `CHANGELOG.md`).
-- Humans should not manually edit AI-managed files or run framework scripts.
+## What you get
+- Deterministic execution boundaries for agent work.
+- Auditable records of intent, decisions, and outcomes.
+- Reduced human interruption through structured clarification.
+- Portability across models and frontends via explicit contracts.
 
-## Handover document (context reset)
-- `handover.md` is the living state transfer file: it records current focus, recent progress, and next steps so anyone (or any model) can resume quickly.
-- Use it to reset the context window—especially with smaller-context LLMs—by asking the agent to refresh/regenerate `handover.md` before starting new work.
-- The agent owns updates; humans should read it for continuity but avoid editing it directly.
+## How it works
+Human intent flows through clarification, governed execution, and logging.
+The framework records specs, plans, validations, and handover artifacts.
 
-## Quick start prompt
-Copy/paste this into any agentic frontend (Codex, Gemini, Claude/Anthropic, Grok, etc.):
+## Quick start
+- Read `HUMAN_START_HERE.md` for the human entrypoint.
+- Read `AGENTS.md` for the authoritative execution contract.
+- Select a stack profile in `docs/stacks/`.
+- Add tasks in chat or `todo-inbox.md`.
+- Use `docs/humans/workflow-adoption.md` for new repositories.
 
-```text
-You are to incorporate this Context-Engineering Framework for Coding Agents, located at https://github.com/holaymolay/context-engineering-framework, as the governance framework for this project.
+## Repository map
+- `AGENTS.md`: core governance rules and operating constraints.
+- `docs/agents.md`: operational framework and execution flow.
+- `docs/humans/`: human-facing guides and onboarding context.
+- `docs/context/`: agent ledgers and context management protocol.
+- `specs/`: spec contracts that govern changes.
+- `skills/`: deterministic Skill packages and schemas.
+- `docs/wiki/`: navigation layer for concepts and playbooks.
+- `README_GOVERNANCE.md`: governs spec-driven README generation and enforcement boundaries.
 
-For new projects, implement this framework from the start. Once the framework is in place I will describe the project and its requirements.
-For existing projects, implement this framework and bring the existing codebase into compliance with the framework.
+## Design philosophy and non-goals
+The framework optimizes for governance, determinism, and auditability.
+It does not try to design UI, replace human judgment, or remove review.
+It is not a prompt library or a set of agent heuristics.
 
-Read `AGENTS.md` and treat it as the authoritative contract.
-Operate in AI-only mode: run scripts yourself and update AI-managed files; humans only add tasks via chat or `todo-inbox.md`.
-
-If your provider has built-in governance features, use this framework as the source of truth and integrate with those features as needed.
-```
-
-## Why it helps
-- Faster delivery with fewer clarification loops.
-- Clear audit trails for every change (specs, ledgers, changelog).
-- Deterministic guardrails (Clarification Gate, Reasoning Skills, one-Concept focus).
-- Portable across LLMs and toolchains.
-
-## How it works (decision tree)
-When you have a task:
-1) State it in chat or add it to `todo-inbox.md` (this is the only file humans should edit).
-2) The agent sweeps the inbox into `todo.md` and routes it.
-3) If it changes the framework itself, it goes to `## Workflow Governance` in `todo.md` and is handled first.
-4) If inputs are unclear, Clarification Gate asks questions before planning.
-5) If inputs are clear, Reasoning Skills enforce constraints before the plan.
-6) The agent plans, executes, validates, and logs outcomes.
-
-## Getting started
-1) Tell the agent which stack profile applies in `docs/stacks/`.
-2) If you are adopting into another repo, ask the agent to run `scripts/bootstrap-workflow.sh`.
-3) Add your first task in chat or to `todo-inbox.md`.
-4) For larger work items, ask the agent to create or use a spec under `specs/`.
-5) Run your coding agent from the CLI or an IDE extension.
-
-## Model requirements
-- Works with a local clone and no web access; network is only needed when a task requires it (package installs, external APIs).
-- Must be able to read/write local files and run shell commands via a CLI or IDE-based agent.
-- Must reliably follow repo instructions, ask clarifying questions, and execute multi-step tasks.
-- Built and tested with OpenAI Codex; intended to work with any frontier-quality LLM, but broader validation is still needed.
-
-## Terminology
-- Framework: the overall governance system (files, rules, tooling, and guardrails).
-- Workflow: the execution sequence inside the framework (Clarification Gate -> Reasoning Skills -> Plan -> Execute -> Validate -> Log).
-
-## Can this be used for non-coding work?
-Yes. The framework can be adapted to any structured project work that needs clarity, accountability, and repeatable decision gates. You would swap stack-specific guidance for domain-specific playbooks and adjust Skills/specs accordingly.
-
-## Key docs (start here)
-- `HUMAN_START_HERE.md` (human entrypoint)
-- `docs/humans/workflow-guide.md` (framework overview)
-- `docs/humans/workflow-adoption.md` (apply the framework to a new project)
-- `docs/humans/user-guide.md` (how to structure requests for best results)
-- `docs/humans/user-guide-cheat-sheet.md` (one-page quickstart)
-- `docs/humans/about.md` (why this framework exists and how it evolved)
-
-## UIP enforcement (schema-aware)
-- Blunt scan: grep-based detection of JSX/HTML/Tailwind leakage outside adapter/renderer allowlists.
-- Blocking checks: UIP-0.1 schema validation, event→synchronization validation, and renderer certification all fail the build on non-compliance.
-- Non-blocking checks: UIP-0.2 shadow validation reports potential failures without failing CI.
-- Shadow validation: draft schemas live alongside UIP-0.1 and produce a summary report in CI.
-- Evolve UIP safely by running shadow validation first, updating migration docs, then promoting rules to blocking.
-- Add new schemas by updating schema constants, fixtures, and `scripts/check-uip-schemas.py`.
-- Suppress checks only via explicit allowlists in `scripts/check-uip-compliance.sh` and `scripts/check-uip-schemas.py` (see `docs/ui-protocol/enforcement.md`).
-
-## Framework revision snapshots (local)
-Framework snapshots are stored locally under `ai_workflow_revisions/` and are gitignored by default. Ask the agent to run `scripts/create-workflow-revision.sh` after governance changes. See `docs/workflow-revisions.md` for the required contents and numbering rules. You’re free to adapt the framework to your project—just tell the agent to update itself in whatever way best fits, and it will apply the change and capture the new revision.
+## README Generation and Governance
+README.md is produced from an explicit spec (`README_SPEC.yaml`) using the external `readme-spec-engine`.
+This framework enforces README quality and structure but does not generate the README itself.
+Generation happens outside this repo; enforcement here ensures the authored README stays aligned with its spec.

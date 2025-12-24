@@ -58,6 +58,10 @@ Security Constraints:
 - Sanitize all inputs; validate outputs against schema before persistence.
 ```
 
+### README governance
+- Treat `README.md` as a governed artifact. Create or update `README_SPEC.yaml` first, then generate the README with `readme-spec-engine` outside this repo, and finally run README enforcement checks.
+- Never free-write README prose; changes require spec updates and regeneration.
+
 ### Skills and Specs
 - Skills live in `/skills/` as deterministic tool packages (`skill.yaml` + schemas + implementation + tests); see `docs/skills/skill-library-v1.md`.
 - Every Skill lists the governing spec ID, Concept manifest and Synchronization contracts (when applicable), validation plan, and security posture (see `docs/security.md` + `docs/access-manifest.md`).

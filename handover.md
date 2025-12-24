@@ -3,10 +3,12 @@
 **AI-managed file — humans should not edit this directly.** The agent keeps current state and next steps here.
 
 ## Current Focus
-- No queued feature work; maintain prompt cleanup rule and await new tasks.
+- None (prompt followups completed; queue is clear).
 
 ## State Snapshot
-  - Governance files exist and todos are clear: `todo-inbox.md` holds template text only; `todo.md` now includes prompt execution tasks; `backlog.md` is empty; bugs are empty.
+- Governance files exist and todos are clear: `todo-inbox.md` is empty; `todo.md` has no pending tasks; `backlog.md` is empty; bugs are empty.
+- README governance docs now declare spec-driven generation, and `README_GOVERNANCE.md` is present.
+- Workflow snapshots are stored locally under `ai_workflow_revisions/`; `rev_009_current` captures the README governance updates (see `docs/workflow-revisions.md`).
 - UI intent protocol concept is under `concepts/ui-intent-protocol/` with schema, adapter, reference renderer, and PDCA doc; Skill `skills/ui-intent-emit/` added for validated intent emission.
 - Workflow snapshots are stored locally under `ai_workflow_revisions/` (gitignored by default); current baseline `rev_008_current` was captured via `scripts/create-workflow-revision.sh` (see `docs/workflow-revisions.md` for required contents/numbering).
 - Key references: `AGENTS.md`, `docs/agents.md`, `docs/humans/workflow-guide.md`, `docs/context-management.md`, `docs/security.md`, `docs/access-manifest.md`, `docs/skills/skill-library-v1.md`, `specs/skill-library-v1.md`, `scripts/skillctl`, and `skills/README.md`.
@@ -18,8 +20,14 @@
 ## Active Skills and Recent Changes
 - Skill scaffolding exists under `skills/_template/` and the contract schema is `skills/_schema/skill.schema.json`; implemented Skills: `skills/fs-hash-tree/`, `skills/skillcard-parse/`, and `skills/skillcard-index/`.
 - Added Skill `ui_intent.emit` under `skills/ui-intent-emit/` for UI intent validation (Spec ID: `d520edbb-18e7-4b29-834c-6756329b2c81`).
+- Added Skill `ui_governance` under `skills/ui-governance/` for UI governance constraints and capability gating.
 
 ## Recent Progress
+- Executed prompt followups 8-9 (README spec-driven governance docs, HUMAN_START_HERE update, README governance CI bridge, new-repo bootstrap Skill) and removed the prompt files. Skill: none. (ledger: 2025-12-24T13:36:38-08:00 — Prompt followup execution (README governance)).
+- Executed prompt followups 5-7 (README rewrite, README lint autofix + quality CI, README rubric + lint guide) and removed the prompt files. Skill: none. (ledger: 2025-12-24T13:23:53-08:00 — README governance followups).
+- Processed `todo-inbox.md` update (queued `prompt_followup9.md`) and confirmed readme-spec-engine repo is unavailable; prompt followups 8-9 are blocked. Skill: none. (ledger: 2025-12-24T13:36:38-08:00 — Prompt followup execution (README governance)).
+- Executed prompt followups 1-4 (doc profiles + pre-commit hook, codex doc rewrite prompt, internal-notes profile, profile summary table, ui_governance skill package + tests, and UI governance validators) and removed the prompt files. Skill: ui_governance. (ledger: 2025-12-24T12:54:26-08:00 — Prompt followup execution).
+- Implemented the Structured Richness documentation system (spec, markdownlint + Vale configs, templates) and moved follow-up prompts into `todo.md`. Skill: none. (ledger: 2025-12-24T12:43:00-08:00 — Structured Richness documentation system).
 - Pushed commit `6be59ff` to `origin/master` per request. Skill: none. (ledger: 2025-12-24T12:30:34-08:00 — Git push (housekeeping)).
 - Confirmed the UI intent Skill manifest and PDCA loop locations for the UI intent system. Skill: none. (ledger: 2025-12-24T12:27:50-08:00 — UI intent protocol confirmation (Skill + PDCA)).
 - Explained what `scripts/check-invariants.sh` and `scripts/check-uip-compliance.sh` do for local enforcement validation. Skill: none. (ledger: 2025-12-24T12:21:58-08:00 — Script explanation (UIP enforcement checks)).

@@ -22,6 +22,11 @@ If your provider has built-in governance features, use this framework as the sou
 - Use chat or `todo-inbox.md` to submit tasks and decisions.
 - Do not edit AI-managed files: `todo.md`, `backlog.md`, `completed.md`, `handover.md`, `CHANGELOG.md`.
 
+## README governance
+Humans author `README_SPEC.yaml` when defining new projects; agents may draft it only when directed and must keep humans in the loop.
+Agents must never free-write `README.md`; they invoke `readme-spec-engine` to generate from the spec and then run enforcement checks.
+When the spec changes, regenerate the README externally and rerun the enforcement scripts.
+
 ## Model Requirements (Short)
 - Works from a local clone with no web access unless the task needs it.
 - Must be able to read/write files and run shell commands via a CLI or IDE agent.

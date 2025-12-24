@@ -4,6 +4,39 @@
 
 Entries use ISO8601 timestamps and newest entries appear first.
 
+## 2025-12-24T21:47:30+00:00
+- Executed `prompt_followup9.md` (added README governance CI bridge and new-repo bootstrap Skill); captured workflow snapshot `rev_009_current`; removed the prompt. (ledger: 2025-12-24T13:36:38-08:00 — Prompt followup execution (README governance))
+
+## 2025-12-24T21:47:29+00:00
+- Executed `prompt_followup8.md` (spec-driven README governance docs, HUMAN_START_HERE update, README map entry); removed the prompt. (ledger: 2025-12-24T13:36:38-08:00 — Prompt followup execution (README governance))
+
+## 2025-12-24T21:40:50+00:00
+- Processed `todo-inbox.md` update (queued `prompt_followup9.md`) and confirmed readme-spec-engine repo is unavailable; prompt followups 8-9 are blocked. (ledger: 2025-12-24T13:36:38-08:00 — Prompt followup execution (README governance))
+
+## 2025-12-24T21:40:49+00:00
+- Executed `prompt_followup7.md` (README governance rubric + lint guide) and removed the prompt. (ledger: 2025-12-24T13:23:53-08:00 — README governance followups)
+
+## 2025-12-24T21:40:48+00:00
+- Executed `prompt_followup6.md` (README lint autofix + quality CI wiring) and removed the prompt. (ledger: 2025-12-24T13:23:53-08:00 — README governance followups)
+
+## 2025-12-24T21:40:47+00:00
+- Executed `prompt_followup5.md` (README rewrite and governance framing) and removed the prompt. (ledger: 2025-12-24T13:23:53-08:00 — README governance followups)
+
+## 2025-12-24T21:20:54+00:00
+- Executed `prompt_followup1.md` (doc profiles, CI enforcement, and profile selection) and removed the prompt. (ledger: 2025-12-24T12:54:26-08:00 — Prompt followup execution)
+
+## 2025-12-24T21:20:53+00:00
+- Executed `prompt_followup2.md` (doc profiles, pre-commit hook, codex rewrite prompt, internal-notes profile, profile summary table) and removed the prompt. (ledger: 2025-12-24T12:54:26-08:00 — Prompt followup execution)
+
+## 2025-12-24T21:20:52+00:00
+- Executed `prompt_followup3.md` (added Skill `ui_governance` package, governance docs, adversarial tests, and wiki references) and removed the prompt. (ledger: 2025-12-24T12:54:26-08:00 — Prompt followup execution)
+
+## 2025-12-24T21:20:51+00:00
+- Executed `prompt_followup4.md` (TypeScript UI governance validators, CLI entrypoint, and passing/failing examples) and removed the prompt. (ledger: 2025-12-24T12:54:26-08:00 — Prompt followup execution)
+
+## 2025-12-24T20:48:48+00:00
+- Implemented the Structured Richness documentation system (spec, markdownlint + Vale configs, templates) and moved follow-up prompts into `todo.md`. (ledger: 2025-12-24T12:43:00-08:00 — Structured Richness documentation system)
+
 ## 2025-12-24T20:30:34+00:00
 - Pushed commit `6be59ff` to `origin/master` per request. (ledger: 2025-12-24T12:30:34-08:00 — Git push (housekeeping))
 
