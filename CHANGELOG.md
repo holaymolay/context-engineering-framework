@@ -5,7 +5,7 @@
 Entries use ISO8601 timestamps and newest entries appear first.
 
 ## 2025-12-28T00:05:31-08:00
-- Hardened post-task GitHub push enforcement (verify-sync guard, run receipts now require `push_hash`, advisory post-commit hook) and swept inbox items into `todo.md`. Push hash: bccaacaa41a803e672e8f48c0c21c85226abf3c8. (ledger: 2025-12-27T23:51:38-08:00 — Push enforcement hardening)
+- Hardened post-task GitHub push enforcement (verify-sync guard, run receipts now require `push_hash`, advisory post-commit hook) and swept inbox items into `todo.md`. Push hash: bccaacaa41a803e672e8f48c0c21c85226abf3c8; logging commit: 52a104902f4e297fd3580fa1f407ef34061e1606; run receipt: runs/2025-12-28/7e772c91-05d7-4857-bb82-f1725a740260.jsonl; snapshot: rev_010_current. (ledger: 2025-12-27T23:51:38-08:00 — Push enforcement hardening)
 
 ## 2025-12-26T00:26:04-08:00
 - Added Design Intent Schema concept (spec, schema, validator, tests, lifecycle docs). Spec: 193e018f-6875-4276-b503-2af48f6ec37b. Stack: Python. (ledger: 2025-12-26T00:23:48-08:00 — Design Intent Schema concept)

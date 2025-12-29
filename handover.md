@@ -10,6 +10,7 @@
 ## State Snapshot
 - Todo lists are updated: `todo-inbox.md` is cleared; `todo.md` now tracks the branch-name bug and two workflow-governance items (housekeeping section + revision directory rename); Current Focus and Backlog are empty.
 - Post-task push enforcement tightened: `scripts/verify-sync.sh` blocks dirty/misaligned branches, run receipts require `push_hash`, and `scripts/git-hooks/post-commit-push-check.sh` provides an advisory warning. Governance docs (AGENTS + docs/agents) and the workflow audit log reflect the new checklist.
+- Latest pushes on origin/master: code commit bccaacaa41a803e672e8f48c0c21c85226abf3c8 plus logging/run-receipt commit 52a104902f4e297fd3580fa1f407ef34061e1606; run receipt lives at `runs/2025-12-28/7e772c91-05d7-4857-bb82-f1725a740260.jsonl`.
 - Design Intent Schema concept lives in `concepts/design-intent-schema/` with the JSON Schema in `schemas/design-intent.schema.json` and a fail-fast validator in `handlers/intent/validate.py`.
 - README governance docs now declare spec-driven generation, and `README_GOVERNANCE.md` is present.
 - Workflow snapshots are stored locally under `ai_workflow_revisions/`; `rev_010_current` captures the push-enforcement updates (see `docs/workflow-revisions.md`).
@@ -33,7 +34,7 @@
 - Added Skill `ui_governance` under `skills/ui-governance/` for UI governance constraints and capability gating.
 
 ## Recent Progress
-- Hardened post-task push enforcement (verify-sync guard, `push_hash` receipts, advisory post-commit hook) and swept inbox items into `todo.md`. Push hash: bccaacaa41a803e672e8f48c0c21c85226abf3c8. Skill: none. (ledger: 2025-12-27T23:51:38-08:00 — Push enforcement hardening).
+- Hardened post-task push enforcement (verify-sync guard, `push_hash` receipts, advisory post-commit hook) and swept inbox items into `todo.md`. Push hash: bccaacaa41a803e672e8f48c0c21c85226abf3c8. Logging commit: 52a104902f4e297fd3580fa1f407ef34061e1606. Snapshot: rev_010_current. Skill: none. (ledger: 2025-12-27T23:51:38-08:00 — Push enforcement hardening).
 - Added Design Intent Schema concept (spec, schema, validator, tests, lifecycle docs). Spec: 193e018f-6875-4276-b503-2af48f6ec37b. Skill: none. Stack: Python. (ledger: 2025-12-26T00:23:48-08:00 — Design Intent Schema concept).
 - Added human-friendly glossary and concepts map, linking them from README, HUMAN_START_HERE, and the wiki index. Skill: none. (ledger: 2025-12-24T13:58:44-08:00 — Human-friendly glossary and wiki clarifications).
 - Added context management deep dive doc and linked it from README and the wiki index. Skill: none. (ledger: 2025-12-24T13:58:44-08:00 — Human-friendly glossary and wiki clarifications).
