@@ -43,5 +43,5 @@ Located in the umbrella repo `schemas/`: Objective Contract, Gap Ledger, Task Pl
 
 ## Inference enforcement
 - Run SEA first; then run inference to produce Gap Ledger before planning.
-- Use lifecycle gate with `--require-gap-ledger` to block execution when Gap Ledger is missing/empty.
+- Use lifecycle gate with `--require-gap-ledger --validate-gap-ledger` to block execution when Gap Ledger is missing/empty.
 - Interrogation is one-question-at-a-time; record evidence/assumptions in the Gap Ledger.
