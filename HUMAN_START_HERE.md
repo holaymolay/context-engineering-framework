@@ -1,5 +1,8 @@
 # Human Start Here
 
+**Hub entry:** Start from the CERES hub `PROMPTLOADER.md` + `CONSTITUTION.md` (umbrella repo) and use hub todo templates/init script when bootstrapping. This repo remains an independent component pulled on demand.
+
+
 This repository is the CERES governance orchestrator for coding agents.
 It is AI-operated: humans provide goals and decisions; the agent runs scripts and updates AI-managed files.
 

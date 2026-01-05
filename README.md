@@ -1,5 +1,8 @@
 # CERES Governance Orchestrator
 Part of the CERES (Coordinated Emergent Reasoning System). Umbrella repo: [CERES](https://github.com/holaymolay/ceres-coordinated-emergent-reasoning-system).
+**Hub alignment:** The authoritative entry for new projects is the CERES hub `PROMPTLOADER.md` + `CONSTITUTION.md`. Use the hub todo templates and init script (`scripts/init-todo-files.sh`) when bootstrapping; this repo stays independent and is pulled on demand via the hub clone/run scripts.
+
+
 
 A governance and context-engineering framework that turns human requests into
 repeatable, auditable agent execution.
