@@ -23,3 +23,17 @@ Follow these rules before any README change lands.
 - Enforcement: this framework validates presence, structure, and governance of the generated README.
 - Agents: must not free-write the README and must keep spec and README in sync.
 - Humans: may author specs and review generated output before enforcement.
+
+## Lifecycle Gates
+- Run `scripts/enforce-lifecycle.py` before execution; it fails if `todo.md` has no unchecked tasks.
+- Require a Prompt Debug Report from the umbrella `prompt-debugger/cli.py` for any intake (task-inbox/chat) before governance.
+- Gap Ledger and Objective Contract must exist before planning; assumptions must be explicit with risk/expiry.
+- Attention-bounded questioning: one bounded question per turn, tied to a Gap ID with rationale.
+- Evidence-backed gap resolution only: evidence link, user answer, or explicit assumption with expiry/risk.
+
+## Artifact Schemas
+Located in the umbrella repo `schemas/`: Objective Contract, Gap Ledger, Task Plan (`todo.md` projection), Completed entry, Prompt Debug Report.
+
+## Commands
+- Prompt Debugger (from umbrella root): `prompt-debugger/cli.py --prompt-file task-inbox.md > /tmp/debug_report.yaml`
+- Lifecycle gate (this repo): `scripts/enforce-lifecycle.py --todo todo.md --gap-ledger gap-ledger.json --prompt-report /tmp/debug_report.yaml`

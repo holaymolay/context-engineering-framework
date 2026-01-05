@@ -182,3 +182,8 @@ Next Action: <who, when>
 - Log API and file-system access made by agents; retain logs per the retention policy in `docs/security.md`.
 - Perform permission checks before executing privileged operations; abort when authorization is unclear.
 - Align with the security playbook for dependency hygiene, incident response, and monitoring of automated changes.
+
+- Pre-governance gate: run umbrella `prompt-debugger/cli.py` on any intake (task-inbox/chat) and attach the Prompt Debug Report to the plan.
+- Lifecycle gate: run `scripts/enforce-lifecycle.py` to ensure `todo.md` has a task plan and required artifacts exist before execution.
+- Attention-bounded questions: one bounded question per turn, tied to Gap ID with rationale; non-compliant prompts are rejected.
+- Gap resolution requires evidence, user answer, or explicit assumption with risk/expiry; otherwise mark as unresolved.
