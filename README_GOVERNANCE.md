@@ -40,3 +40,8 @@ Located in the umbrella repo `schemas/`: Objective Contract, Gap Ledger, Task Pl
 
 - Observability hook: use umbrella `scripts/log_event.py` via `scripts/enforce-lifecycle.py --log-helper ../scripts/log_event.py --task-id <id>` to log gate outcomes.
 - Optional template enforcement: `--require-ceres-todo` to ensure todo.md matches the CERES template header.
+
+## Inference enforcement
+- Run SEA first; then run inference to produce Gap Ledger before planning.
+- Use lifecycle gate with `--require-gap-ledger` to block execution when Gap Ledger is missing/empty.
+- Interrogation is one-question-at-a-time; record evidence/assumptions in the Gap Ledger.

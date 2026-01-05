@@ -1,3 +1,5 @@
+
+**Inference enforcement:** run SEA first, then produce Gap Ledger before planning; use lifecycle gate with `--require-gap-ledger` to block execution if missing/empty; interrogate one question at a time and record evidence/assumptions.
 **Hub entry:** Load CERES via the umbrella `PROMPTLOADER.md` + `CONSTITUTION.md` and use hub todo templates (`scripts/init-todo-files.sh`) when bootstrapping a project. This component stays independent and is invoked via the hub clone/run scripts.
 
 
