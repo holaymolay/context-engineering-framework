@@ -67,6 +67,7 @@ def main() -> None:
     parser.add_argument("--require-ceres-todo", action="store_true", help="Fail if todo.md does not look like CERES template")
     parser.add_argument("--require-gap-ledger", action="store_true", help="Fail if gap ledger is missing or empty")
     parser.add_argument("--validate-gap-ledger", action="store_true", help="Validate gap ledger content (evidence for resolved gaps)")
+    parser.add_argument("--require-todo-structure", action="store_true", help="Fail if todo.md missing required CERES sections")
     parser.add_argument("--task-id", help="Optional task identifier for logging context")
     parser.add_argument("--log-helper", type=Path, help="Optional path to umbrella scripts/log_event.py to log gate outcome")
     args = parser.parse_args()
@@ -108,6 +109,13 @@ def main() -> None:
 
     if args.require_ceres_todo and not check_ceres_todo(args.todo):
         failures.append(f"todo.md does not appear to be the CERES template: {args.todo}")
+
+    if args.require_todo_structure:
+        required_sections = ["## Bugs", "## Workflow Governance", "## Current Focus", "## Next Features & Updates", "## Backlog"]
+        contents = args.todo.read_text().splitlines() if args.todo.exists() else []
+        for section in required_sections:
+            if not any(line.strip() == section for line in contents):
+                failures.append(f"todo.md missing required section: {section}")
 
     if failures:
         sys.stderr.write("Lifecycle gate failed:\n" + "\n".join(f"- {f}" for f in failures) + "\n")
