@@ -17,7 +17,7 @@ Stack-specific instructions live in `docs/stacks/`. Choose the profile that matc
 ## Build, Test, and Development Commands
 - Use the commands defined in the active stack profile/README for dev/start/lint/test/coverage flows.
 - Document any new commands or scripts in the stack profile and project README so routing agents can load them reliably.
-- README governance: Author `README_SPEC.yaml` first, generate `README.md` externally via `cef-readme-spec-engine`, then run enforcement checks; never free-write the README.
+- README governance: Author `README_SPEC.yaml` first, generate `README.md` externally via `readme-spec-engine`, then run enforcement checks; never free-write the README.
 
 ## Coding Style & Naming Conventions
 - Adopt lint/format rules defined by the stack profile (e.g., Standard+Prettier for Node, Black/Ruff for Python). Do not mix styles within a stack.

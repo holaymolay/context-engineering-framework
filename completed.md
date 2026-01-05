@@ -81,13 +81,13 @@
 
 - [x] 2025-12-22: Added note to README snapshot section that users can ask the agent to update the framework to fit the project; captured local snapshot `rev_001_current`. Skill: none. (ledger: 2025-12-22T15:19:54-08:00 — README change request confirmation)
 
-- [x] 2025-12-22: Updated quick-start prompts to tell the LLM to clone `holaymolay/cef-governance-orchestrator` if missing and work from repo root; captured local snapshot `rev_040_current`. Skill: none. (ledger: 2025-12-22T14:28:02-08:00 — Quick-start clone instructions)
+- [x] 2025-12-22: Updated quick-start prompts to tell the LLM to clone `holaymolay/governance-orchestrator` if missing and work from repo root; captured local snapshot `rev_040_current`. Skill: none. (ledger: 2025-12-22T14:28:02-08:00 — Quick-start clone instructions)
 
 - [x] 2025-12-22: Added repo link and clone snippet to quick-start prompts and captured local snapshot `rev_039_current`. Skill: none. (ledger: 2025-12-22T14:25:44-08:00 — Add repo link for LLM quick-start)
 
 - [x] 2025-12-22: Propagated the official title "Context-Engineering Framework for Coding Agents" across human entrypoints and guides, and captured local snapshot `rev_037_current`. Skill: none. (ledger: 2025-12-22T13:36:34-08:00 — Propagate official framework title)
 
-- [x] 2025-12-22: Updated quick-start prompts to reference `holaymolay/cef-governance-orchestrator` and captured local snapshot `rev_038_current`. Skill: none. (ledger: 2025-12-22T14:23:09-08:00 — Update quick-start repo reference)
+- [x] 2025-12-22: Updated quick-start prompts to reference `holaymolay/governance-orchestrator` and captured local snapshot `rev_038_current`. Skill: none. (ledger: 2025-12-22T14:23:09-08:00 — Update quick-start repo reference)
 
 - [x] 2025-12-22: Provided dictionary-word acronym options using the provided letter set with `CE` kept together. Skill: none. (ledger: 2025-12-22T11:26:38-08:00 — Acronym options from letter set)
 

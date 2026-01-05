@@ -59,7 +59,7 @@ Security Constraints:
 ```
 
 ### README governance
-- Treat `README.md` as a governed artifact. Create or update `README_SPEC.yaml` first, then generate the README with `cef-readme-spec-engine` outside this repo, and finally run README enforcement checks.
+- Treat `README.md` as a governed artifact. Create or update `README_SPEC.yaml` first, then generate the README with `readme-spec-engine` outside this repo, and finally run README enforcement checks.
 - Never free-write README prose; changes require spec updates and regeneration.
 
 ### Skills and Specs

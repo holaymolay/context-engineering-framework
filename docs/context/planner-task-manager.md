@@ -954,7 +954,7 @@
 - Status: completed
 
 ## 2025-12-22T14:23:09-08:00 — Update quick-start repo reference
-- Summary: Point quick-start prompts to `holaymolay/cef-governance-orchestrator`.
+- Summary: Point quick-start prompts to `holaymolay/governance-orchestrator`.
 - Details:
   - Pre-task `todo-inbox.md` sweep: no items to move (template text only).
   - Skill search: no applicable Skill (doc tweak).

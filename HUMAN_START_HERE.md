@@ -1,13 +1,13 @@
 # Human Start Here
 
-This repository is the Context Engineering Framework for Coding Agents.
+This repository is the CERES governance orchestrator for coding agents.
 It is AI-operated: humans provide goals and decisions; the agent runs scripts and updates AI-managed files.
 
 ## Quick Start (Copy/Paste Prompt)
 Paste this into any agentic frontend (Codex, Gemini, Claude/Anthropic, Grok, etc.) and add your task:
 
 ```text
-You are to incorporate this Context Engineering Framework for Coding Agents, located at https://github.com/holaymolay/cef-governance-orchestrator, as the governance framework for this project.
+You are to incorporate this CERES governance orchestrator, located at https://github.com/holaymolay/governance-orchestrator, as the governance framework for this project.
 
 For new projects, implement this framework from the start. Once the framework is in place I will describe the project and its requirements.
 For existing projects, implement this framework and bring the existing codebase into compliance with the framework.
@@ -30,7 +30,7 @@ If your provider has built-in governance features, use this framework as the sou
 
 ## README governance
 Humans author `README_SPEC.yaml` when defining new projects; agents may draft it only when directed and must keep humans in the loop.
-Agents must never free-write `README.md`; they invoke `cef-readme-spec-engine` to generate from the spec and then run enforcement checks.
+Agents must never free-write `README.md`; they invoke `readme-spec-engine` to generate from the spec and then run enforcement checks.
 When the spec changes, regenerate the README externally and rerun the enforcement scripts.
 
 ## Model Requirements (Short)

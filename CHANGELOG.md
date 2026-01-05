@@ -144,7 +144,7 @@ Entries use ISO8601 timestamps and newest entries appear first.
 - Reworded quick-start prompt to instruct applying the public framework for new and existing projects; captured local snapshot `rev_041_current`. (ledger: 2025-12-22T14:38:20-08:00 — Quick-start prompt rewording)
 
 ## 2025-12-22T22:28:36+00:00
-- Updated quick-start prompts to instruct cloning `holaymolay/cef-governance-orchestrator` if missing and to use the repo root; captured local snapshot `rev_040_current`. (ledger: 2025-12-22T14:28:02-08:00 — Quick-start clone instructions)
+- Updated quick-start prompts to instruct cloning `holaymolay/governance-orchestrator` if missing and to use the repo root; captured local snapshot `rev_040_current`. (ledger: 2025-12-22T14:28:02-08:00 — Quick-start clone instructions)
 
 ## 2025-12-22T22:26:45+00:00
 - Added repo link and clone snippet to quick-start prompts and captured local snapshot `rev_039_current`. (ledger: 2025-12-22T14:25:44-08:00 — Add repo link for LLM quick-start)
@@ -156,7 +156,7 @@ Entries use ISO8601 timestamps and newest entries appear first.
 - Provided dictionary-word acronym options using the provided letter set with `CE` kept together. (ledger: 2025-12-22T11:26:38-08:00 — Acronym options from letter set)
 
 ## 2025-12-22T22:23:28+00:00
-- Updated quick-start prompts to reference `holaymolay/cef-governance-orchestrator` and captured local snapshot `rev_038_current`. (ledger: 2025-12-22T14:23:09-08:00 — Update quick-start repo reference)
+- Updated quick-start prompts to reference `holaymolay/governance-orchestrator` and captured local snapshot `rev_038_current`. (ledger: 2025-12-22T14:23:09-08:00 — Update quick-start repo reference)
 
 ## 2025-12-22T18:53:30+00:00
 - Added `HUMAN_START_HERE.md`, linked it in README/wiki/human docs, updated snapshot guidance/tooling, and captured local snapshot `rev_035_current`. (ledger: 2025-12-22T10:52:19-08:00 — Human entrypoint + snapshot inclusion)

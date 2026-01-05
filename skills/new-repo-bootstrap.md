@@ -4,7 +4,7 @@ Use this Skill contract when creating a new repository so README content stays s
 
 ## Invariant workflow
 1. Spec first: create `README_SPEC.yaml` describing the narrative and structure.
-2. Deterministic generation: run `cef-readme-spec-engine generate` to produce `README.md` from the spec only.
+2. Deterministic generation: run `readme-spec-engine generate` to produce `README.md` from the spec only.
 3. Governance wiring: add README governance CI and align with the context-engineering enforcement layer.
 4. Stop: do not hand-edit `README.md`; future changes require spec updates and regeneration.
 
@@ -16,7 +16,7 @@ Use this Skill contract when creating a new repository so README content stays s
 
 ## Prohibitions
 - Do not free-write or patch `README.md`.
-- Do not vendor `cef-readme-spec-engine` into the repository.
+- Do not vendor `readme-spec-engine` into the repository.
 - Do not bypass enforcement by skipping README lint/governance checks.
 
 ## Rationale

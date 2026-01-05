@@ -1,5 +1,5 @@
-# CEF Governance Orchestrator
-Part of the Context Engineering Framework (CEF). Umbrella repo: [context-engineering-framework](https://github.com/holaymolay/cef-governance-orchestrator).
+# CERES Governance Orchestrator
+Part of the CERES (Coordinated Emergent Reasoning System). Umbrella repo: [CERES](https://github.com/holaymolay/ceres-coordinated-emergent-reasoning-system).
 
 A governance and context-engineering framework that turns human requests into
 repeatable, auditable agent execution.
