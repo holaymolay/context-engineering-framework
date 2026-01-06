@@ -85,7 +85,33 @@ def _parse_block(lines: list[Tuple[int, str]], index: int, indent: int) -> Tuple
                     child, i = _parse_block(lines, i, child_indent)
                     items.append(child)
             else:
-                items.append(_parse_scalar(rest))
+                if ":" in rest and not rest.lstrip().startswith(("'", '"')):
+                    key, value = rest.split(":", 1)
+                    key = key.strip()
+                    if not key:
+                        raise YamlError(f"Empty key in mapping entry: {rest}")
+                    value = value.strip()
+                    mapping: dict[str, Any] = {}
+                    if value == "":
+                        if i >= len(lines) or lines[i][0] <= indent:
+                            mapping[key] = {}
+                        else:
+                            child_indent = lines[i][0]
+                            child, i = _parse_block(lines, i, child_indent)
+                            mapping[key] = child
+                    else:
+                        mapping[key] = _parse_scalar(value)
+
+                    if i < len(lines) and lines[i][0] > indent:
+                        child_indent = lines[i][0]
+                        child, i = _parse_block(lines, i, child_indent)
+                        if not isinstance(child, dict):
+                            raise YamlError("List item mapping must be a mapping")
+                        mapping.update(child)
+
+                    items.append(mapping)
+                else:
+                    items.append(_parse_scalar(rest))
         return items, i
 
     mapping: dict[str, Any] = {}
